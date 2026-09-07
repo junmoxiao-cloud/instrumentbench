@@ -10,9 +10,12 @@
 
 - [x] 仓库初始化（LICENSE / .gitignore / 目录骨架）
 - [x] [docs/judge-schema.md](docs/judge-schema.md) v0.1-draft（字段名待评审冻结）
-- [ ] tests/ 合成轨迹用例 pytest 骨架（预热任务，下一项）
-- [ ] judge/ 判分器内核（挂主线 T4 判分器交付后打包）
-- [ ] tasks/ 示例任务 YAML ×2（同上）
+- [x] [judge/snapshot.py](judge/snapshot.py) 数据契约：EnvSnapshot / EpisodeResult / F0–F4 码表 / CSV 列契约
+- [x] [tests/](tests/cases.py) 合成轨迹用例 ×13（黄金成功/边界/latch A-B/粘滞/抖动/F0/F3…；evaluator 落地前自动 skip，落地后应全绿）
+- [x] [docs/failure-taxonomy.md](docs/failure-taxonomy.md) 失败码表详表（判定条件/证据指标/优先级/标注对应）
+- [x] [docs/task-spec.md](docs/task-spec.md) 新增任务三步指南 + 判据标定方法 + 常见坑
+- [ ] judge/evaluator.py + batch.py（挂主线 T4 判分器交付实现，测试即验收）
+- [ ] tasks/ 示例任务 YAML ×2（随 evaluator 一起入库）
 - [ ] v0.1 发布（README 定稿 + 5 分钟快速开始 + 录屏）
 
 ## 版本规划
